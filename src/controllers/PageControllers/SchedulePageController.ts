@@ -18,6 +18,8 @@ export default (View: (props: IPropsView) => ReactNode) => {
         constructor(props: IPropsSchedulePageContainer) {
             super(props);
 
+            window.scrollTo(0, 0);
+
             //данные запроса
             const countryCode = this.props.match.params.countryCode;
             this.date = this.props.match.params.date;

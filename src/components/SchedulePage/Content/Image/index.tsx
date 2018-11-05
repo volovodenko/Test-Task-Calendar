@@ -11,11 +11,12 @@ export const Image = ({item}: IProps) => (
     <div className={styles.image}>
         <ImageZoom
             image={{
-                src: item.show.image ? item.show.image.medium : noImage,
+                //делаем https (heroku ругется) - изначально в image http
+                src: item.show.image ? `https${item.show.image.medium.slice(4)}` : noImage,
                 alt: item.show.name,
             }}
             zoomImage={{
-                src: item.show.image ? item.show.image.original : noImage,
+                src: item.show.image ? `https${item.show.image.original.slice(4)}` : noImage,
                 alt: item.show.name
             }}
             defaultStyles={{
