@@ -1,0 +1,61 @@
+.calendar {
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.dates {
+  border: 1px solid #d0d4d9;
+
+  ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+
+    li {
+      width: calc(100% / 7);
+      border: 1px solid #d0d4d9;
+
+
+      a {
+        display: flex;
+        height: 100%;
+        color: #4d5155;
+        text-decoration: none;
+
+        &.today {
+          font-weight: bold;
+          background-color: #ededed;
+          color: #333333;
+        }
+
+        &.disabled {
+          color: #cccfd3;
+        }
+      }
+
+      span {
+        margin: auto auto;
+      }
+
+      &:hover {
+        font-weight: bold;
+        border: 1px solid red;
+        cursor: pointer;
+        color: #333333;
+      }
+
+      //for square cells
+      &:before {
+        content: '';
+        float: left;
+        //100% means the
+        //div will remain 100% as tall as it is wide, or square in other words
+        padding-bottom: 100%;
+      }
+    }
+
+  }
+}
+

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #999;
+}
+
+:global {
+
+  #root {
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+    user-select: none;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
+    position: relative;
+  }
+
+
+
+}
+
+
